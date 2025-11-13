@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App.tsx";
+import "./index.css";
+import Home from "./Pages/Home/Home.tsx";
+import Contato from "./Pages/Contato/Contato.tsx";
+import Sobre from "./Pages/Sobre/Sobre.tsx";
+import Integrantes from "./Pages/Integrantes/Integrantes.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />}>
+          <Route index element={<Home />} />
+          <Route path='contato' element={<Contato />} />
+          <Route path='sobre' element={<Sobre />} />
+          <Route path='integrantes' element={<Integrantes />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>
+);

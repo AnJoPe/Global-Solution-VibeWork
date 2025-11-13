@@ -1,68 +1,82 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* TEMA CLARO */
+@theme {
+  /* Backgrounds */
+  --color-background: #fbfbfb; /* Fundo da página */
+  --color-surface-primary: #f3f3f4; /* Fundo da Sidebar/Cards */
+  --color-surface-primary-hover: #e7e7e9; /* Fundo da Sidebar/Cards com Hover */
+  --color-surface-primary-focus: #dddde0; /* Fundo da Sidebar/Cards com Focus */
+  --color-surface-secondary: #f7f7f7; /* Fundo do Header */
+  --color-surface-secondary-hover: #ffffff; /* Fundo do Header com Hover */
+  --color-surface-secondary-focus: #e7e7e9; /* Fundo do Header com Focus */
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* Textos */
+  --color-primary: #000000; /* Texto Primário */
+  --color-secondary: #2f3035; /* Texto Secundário */
+  --color-tertiary: #6d6e77; /* Texto Terciário */
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* Brand Color */
+  --color-brand: #47a8a6; /* Cor principal da VibeWork */
+  --color-brand-hover: #3d9795; /* Cor principal da VibeWork com Hover */
+  --color-brand-focus: #337f7d; /* Cor principal da VibeWork com Focus */
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* Success */
+  --color-success-300: #82e9c0;
+  --color-success-400: #54d2a2;
+  --color-success-500: #27bd82;
+  --color-success-600: #1b855a;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* Error*/
+  --color-error-300: #febfc1;
+  --color-error-400: #fe988f;
+  --color-error-500: #fe5f55;
+  --color-error-600: #d94035;
+
+  /* Neutros */
+  --color-neutral-300: #dedfe4;
+  --color-neutral-500: #746d75;
+  --color-neutral-600: #58525e;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* TEMA ESCURO */
+.dark {
+  /* Backgrounds */
+  --color-background: #36373e; /* Fundo da página */
+  --color-surface-primary: #2c2d32; /* Fundo da Sidebar */
+  --color-surface-primary-hover: #35353a; /* Fundo da Sidebar com Hover */
+  --color-surface-primary-focus: #414248; /* Fundo da Sidebar com Focus */
+  --color-surface-secondary: #3c3d45; /* Fundo do Header/Cards */
+  --color-surface-secondary-hover: #393a41; /* Fundo do Header/Cards com Hover */
+  --color-surface-secondary-focus: #35353a; /* Fundo do Header/Cards com Focus */
+
+  /* Textos */
+  --color-primary: #ffffff; /* Texto Primário */
+  --color-secondary: #dfe0e2; /* Texto Secundário */
+  --color-tertiary: #adaeb4; /* Texto Terciário */
+
+  /* Brand Color */
+  --color-brand: #5fc3c1; /* Cor principal da VibeWork */
+  --color-brand-hover: #52b1af; /* Cor principal da VibeWork com Hover */
+  --color-brand-focus: #469c9a; /* Cor principal da VibeWork com Focus */
+
+  /* Success */
+  --color-success-300: #54d2a2;
+  --color-success-400: #37bf8c;
+  --color-success-500: #27bd82;
+  --color-success-600: #1b855a;
+
+  /* Error*/
+  --color-error-300: #fe988f;
+  --color-error-400: #fe7c6e;
+  --color-error-500: #fe5f55;
+  --color-error-600: #e4574d;
+  --color-error-700: #e4574d;
+
+  /* Neutros */
+  --color-neutral-300: #312926;
+  --color-neutral-500: #746d75;
+  --color-neutral-600: #58525e;
 }
