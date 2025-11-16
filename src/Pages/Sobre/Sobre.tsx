@@ -5,9 +5,9 @@ export default function Sobre() {
 
   return (
     <>
-      <div className='flex flex-col w-[85%] py-12 items-center gap-10'>
-        <h2 className='text-4xl font-semibold self-start'>Quem Somos</h2>
-        <div className='flex flex-col w-full gap-5 px-10 text-xl'>
+      <div className='flex flex-col w-[90%] md:w-[85%] py-12 items-center gap-10'>
+        <h2 className='text-3xl lg:text-4xl font-semibold self-start'>Quem Somos</h2>
+        <div className='flex flex-col w-full gap-5 px-5 md:px-10 text-lg lg:text-xl'>
           <p>
             A VibeWork é uma plataforma criada para ajudar profissionais, equipes e empresas que atuam no modelo híbrido a manter o equilíbrio entre produtividade e
             bem-estar. Frente aos desafios de alternar entre dias de trabalho remoto e presencial, reunimos, em um só lugar, ferramentas para organizar a rotina,
@@ -23,11 +23,11 @@ export default function Sobre() {
             uma cultura de produtividade equilibrada.
           </p>
         </div>
-        <h2 className='text-4xl font-semibold self-start'>Perguntas Frequentes</h2>
-        <div className='flex flex-col w-full gap-5 px-10'>
+        <h2 className='text-3xl lg:text-4xl font-semibold self-start'>Perguntas Frequentes</h2>
+        <div className='flex flex-col w-full gap-5 px-5 md:px-10'>
           <div className='flex flex-col px-3 w-full bg-surface-primary dark:bg-surface-secondary rounded shadow-md self-center transition-all duration-400'>
             <div className='flex px-2 py-3 justify-between items-center text-secondary' onClick={() => setAberta((prev) => !prev)}>
-              <h3 className='font-medium text-[1.7rem] select-none transition-all duration-400'>
+              <h3 className='font-medium text-xl sm:text-[1.35rem] md:text-2xl lg:text-[1.7rem] select-none transition-all duration-400'>
                 O VibeWork é apenas um organizador de tarefas?
               </h3>
               <svg
@@ -42,7 +42,7 @@ export default function Sobre() {
               </svg>
             </div>
             <div className={`overflow-hidden transition-all duration-400 ${aberta ? "" : "max-h-0"}`}>
-              <p className='text-tertiary text-justify font-base text-xl px-1.5 pb-3'>
+              <p className='text-tertiary text-justify font-base sm:text-[1.15rem] md:text-xl px-1.5 pb-3'>
                 Não. O VibeWork vai além das agendas convencionais: integra planejamento semanal entre remoto e presencial, envia lembretes personalizados de pausa,
                 permite check-ins de humor e bem-estar, e oferece dashboards com métricas para autoconhecimento. Tudo pensado para promover um equilíbrio saudável na
                 rotina profissional e pessoal.
@@ -51,7 +51,7 @@ export default function Sobre() {
           </div>
           <div className='flex flex-col px-3 w-full bg-surface-primary dark:bg-surface-secondary rounded shadow-md self-center transition-all duration-400'>
             <div className='flex px-2 py-3 justify-between items-center text-secondary' onClick={() => setAberta((prev) => !prev)}>
-              <h3 className='font-medium text-[1.7rem] select-none transition-all duration-400'>
+              <h3 className='font-medium text-xl sm:text-[1.35rem] md:text-2xl lg:text-[1.7rem] select-none transition-all duration-400'>
                 Meus dados e registros ficam privados?
               </h3>
               <svg
@@ -66,7 +66,7 @@ export default function Sobre() {
               </svg>
             </div>
             <div className={`overflow-hidden transition-all duration-400 ${aberta ? "" : "max-h-0"}`}>
-              <p className='text-tertiary text-justify font-base text-xl px-1.5 pb-3'>
+              <p className='text-tertiary text-justify font-base sm:text-[1.15rem] md:text-xl px-1.5 pb-3'>
                 Sim. Todos os dados de rotina, bem-estar e produtividade salvos no VibeWork pertencem apenas ao usuário. Não são compartilhados com terceiros ou com a
                 empresa, exceto se o próprio usuário optar por algum recurso empresarial ou relatório coletivo em um plano corporativo.
               </p>
@@ -74,7 +74,7 @@ export default function Sobre() {
           </div>
           <div className='flex flex-col px-3 w-full bg-surface-primary dark:bg-surface-secondary rounded shadow-md self-center transition-all duration-400'>
             <div className='flex px-2 py-3 justify-between items-center text-secondary' onClick={() => setAberta((prev) => !prev)}>
-              <h3 className='font-medium text-[1.7rem] select-none transition-all duration-400'>
+              <h3 className='font-medium text-xl sm:text-[1.35rem] md:text-2xl lg:text-[1.7rem] select-none transition-all duration-400'>
                 Posso personalizar meus horários, notificações e tipos de pausa?
               </h3>
               <svg
@@ -89,7 +89,7 @@ export default function Sobre() {
               </svg>
             </div>
             <div className={`overflow-hidden transition-all duration-400 ${aberta ? "" : "max-h-0"}`}>
-              <p className='text-tertiary text-justify font-base text-xl px-1.5 pb-3'>
+              <p className='text-tertiary text-justify font-base sm:text-[1.15rem] md:text-xl px-1.5 pb-3'>
                 Sim! O VibeWork permite que cada usuário ajuste sua agenda, configure horários de trabalho ou folga, defina tipos e frequência das pausas, além de receber
                 notificações conforme sua preferência.
               </p>
@@ -97,7 +97,7 @@ export default function Sobre() {
           </div>
           <div className='flex flex-col px-3 w-full bg-surface-primary dark:bg-surface-secondary rounded shadow-md self-center transition-all duration-400'>
             <div className='flex px-2 py-3 justify-between items-center text-secondary' onClick={() => setAberta((prev) => !prev)}>
-              <h3 className='font-medium text-[1.7rem] select-none transition-all duration-400'>
+              <h3 className='font-medium text-xl sm:text-[1.35rem] md:text-2xl lg:text-[1.7rem] select-none transition-all duration-400'>
                 O sistema funciona para quem trabalha só presencialmente ou só remotamente?
               </h3>
               <svg
@@ -112,7 +112,7 @@ export default function Sobre() {
               </svg>
             </div>
             <div className={`overflow-hidden transition-all duration-400 ${aberta ? "" : "max-h-0"}`}>
-              <p className='text-tertiary text-justify font-base text-xl px-1.5 pb-3'>
+              <p className='text-tertiary text-justify font-base sm:text-[1.15rem] md:text-xl px-1.5 pb-3'>
                 Sim. Embora VibeWork seja ideal para regimes híbridos, qualquer profissional pode usar a plataforma para organizar a própria rotina, fazer registros de
                 bem-estar e acompanhar seus hábitos de trabalho, independentemente do formato de atuação.
               </p>

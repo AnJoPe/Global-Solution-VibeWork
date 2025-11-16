@@ -1,13 +1,13 @@
 export default function Integrantes() {
   return (
     <>
-      <div className='flex py-12 items-center gap-6 lex-wrap justify-center xl:gap-10'>
-        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[360px] h-[500px]'>
+      <div className='flex flex-col py-12 items-center gap-6 lg:flex-row lg:flex-wrap lg:justify-center xl:gap-10'>
+        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[300px] h-[430px] sm:h-[460px] md:w-[350px] lg:w-[360px] lg:h-[500px]'>
           <div className='flex items-center justify-center rounded-full aspect-square bg-brand transition-all duration-400'>
             <img src='/Integrantes/andre_rosa.png' alt={`Foto do integrante André Rosa Colombo`} draggable='false' />
           </div>
-          <h2 className='min-h-[50px] text-center text-2xl'>André Rosa Colombo</h2>
-          <p className='text-secondary text-[1.35rem] transition-all duration-400'>RM 563112 | 1TDSA</p>
+          <h2 className='min-h-[50px] text-center text-[1.34rem] lg:text-2xl'>André Rosa Colombo</h2>
+          <p className='text-secondary text-[1.1rem] lg:text-[1.35rem] transition-all duration-400'>RM 563112 | 1TDSA</p>
           <div className='flex gap-8'>
             <a
               href='https://github.com/AndreColombo'
@@ -29,12 +29,12 @@ export default function Integrantes() {
             </a>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[360px] h-[500px]'>
+        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[300px] h-[430px] sm:h-[460px] md:w-[350px] lg:w-[360px] lg:h-[500px]'>
           <div className='flex items-center justify-center rounded-full aspect-square bg-brand transition-all duration-400'>
             <img src='/Integrantes/jose_diogo.png' alt={`Foto do integrante José Diogo da Silva Neves`} draggable='false' />
           </div>
-          <h2 className='min-h-[50px] text-center text-2xl'>José Diogo da Silva Neves</h2>
-          <p className='text-secondary text-[1.35rem] transition-all duration-400'>RM 562341 | 1TDSA</p>
+          <h2 className='min-h-[50px] text-center text-[1.34rem] lg:text-2xl'>José Diogo da Silva Neves</h2>
+          <p className='text-secondary text-[1.1rem] lg:text-[1.35rem] transition-all duration-400'>RM 562341 | 1TDSA</p>
           <div className='flex gap-8'>
             <a
               href='https://github.com/ZeDio'
@@ -56,12 +56,12 @@ export default function Integrantes() {
             </a>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[360px] h-[500px]'>
+        <div className='flex flex-col items-center justify-center px-10 md:px-0 gap-3 bg-surface-primary dark:bg-surface-secondary transition-all duration-400 rounded-2xl font-bold w-[300px] h-[430px] sm:h-[460px] md:w-[350px] lg:w-[360px] lg:h-[500px]'>
           <div className='flex items-center justify-center rounded-full aspect-square bg-brand transition-all duration-400'>
             <img src='/Integrantes/pedro_miranda.png' alt={`Foto do integrante Pedro Henrique M. de Vasconcelos`} draggable='false' />
           </div>
-          <h2 className='min-h-[50px] text-center text-2xl'>Pedro Henrique M. de Vasconcelos</h2>
-          <p className='text-secondary text-[1.35rem] transition-all duration-400'>RM 562682 | 1TDSA</p>
+          <h2 className='min-h-[50px] text-center text-[1.34rem] lg:text-2xl'>Pedro Henrique M. de Vasconcelos</h2>
+          <p className='text-secondary text-[1.1rem] lg:text-[1.35rem] transition-all duration-400'>RM 562682 | 1TDSA</p>
           <div className='flex gap-8'>
             <a
               href='https://github.com/pmiranda27'

@@ -22,20 +22,20 @@ export default function Perfil() {
 
   if (loading) {
     return (
-      <div className='flex flex-col w-[85%] py-12 items-center gap-10'>
-        <h2 className='text-4xl font-semibold'>Carregando Informações...</h2>
+      <div className='flex flex-col w-[90%] md:w-[85%] py-12 items-center gap-10'>
+        <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold'>Carregando Informações...</h2>
       </div>
     );
   }
 
   return (
-    <div className='flex flex-col w-[85%] items-center py-12 gap-10'>
-      <h2 className='text-4xl font-semibold self-start'>Meu Perfil</h2>
-      <div className='flex w-[85%] justify-center px-12 gap-20'>
+    <div className='flex flex-col w-[90%] md:w-[85%] items-center py-12 gap-10'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold self-start'>Meu Perfil</h2>
+      <div className='flex flex-col lg:flex-row w-[90%] md:w-[85%] justify-center md:px-12 gap-5 md:gap-20'>
         <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='1' strokeLinecap='round' className='h-44'>
           <path d='M7 20.662V19C7 18.4696 7.21071 17.9609 7.58579 17.5858C7.96086 17.2107 8.46957 17 9 17H15C15.5304 17 16.0391 17.2107 16.4142 17.5858C16.7893 17.9609 17 18.4696 17 19V20.662M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7C13.6569 7 15 8.34315 15 10Z' />
         </svg>
-        <form className='grid grid-cols-2 gap-8 w-3/5'>
+        <form className='grid grid-cols-1 xl:grid-cols-2 gap-8 w-[90%] md:w-4/5 lg:w-3/5'>
           <label className='flex flex-col gap-2 text-xl font-bold'>
             Nome
             <input
@@ -103,7 +103,7 @@ export default function Perfil() {
           <button
             type='submit'
             disabled={saving}
-            className={`flex w-fit px-3 py-1.5 gap-3 col-start-2 justify-self-end items-center rounded text-xl text-white font-semibold cursor-pointer ${
+            className={`flex w-fit px-3 py-1.5 gap-3 xl:col-start-2 md:justify-self-end items-center rounded text-xl text-white font-semibold cursor-pointer ${
               saving ? "bg-gray-400 cursor-not-allowed" : "bg-brand hover:bg-brand-hover focus:bg-brand-focus"
             }`}>
             {saving ? "Salvando..." : "Salvar"}

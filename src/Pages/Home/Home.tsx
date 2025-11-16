@@ -5,18 +5,18 @@ export default function Home() {
   const [loadingBemEstar, setLoadingBemEstar] = useState(false);
 
   return (
-    <div className='flex flex-col w-[85%] py-12 items-center gap-5'>
-      <h2 className='text-4xl font-semibold self-start'>Agenda de Trabalho</h2>
-      <div className='flex w-full gap-5 text-lg mb-5'>
-        <div className='w-3/5 px-8 py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>Calendário</div>
-        <div className='flex flex-col w-2/5 gap-5'>
-          <div className='w-full grow px-8 py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
-            <h3 className='text-xl font-semibold mb-3'>Eventos</h3>
+    <div className='flex flex-col w-[90%] md:w-[85%] py-12 items-center gap-5'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold self-start'>Agenda de Trabalho</h2>
+      <div className='flex flex-col lg:flex-row w-full gap-5 text-sm md:text-base lg:text-lg mb-5'>
+        <div className='w-full lg:w-3/5 px-5 md:px-8 py-2.5 md:py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>Calendário</div>
+        <div className='flex flex-col w-full lg:w-2/5 gap-5'>
+          <div className='w-full grow px-5 md:px-8 py-2.5 md:py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
+            <h3 className='text-lg md:text-xl font-semibold mb-3'>Eventos</h3>
             <div className='flex flex-col gap-3 max-h-96 overflow-y-auto'>Lista de eventos</div>
             <hr className='border border-brand rounded my-5' />
             <div>Adicionar eventos</div>
           </div>
-          <div className='w-full px-8 py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
+          <div className='w-full px-5 md:px-8 py-2.5 md:py-4 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
             <div className='flex flex-col gap-2 text-base'>
               <div className='flex justify-between'>
                 <span>Segunda-Feira:</span>
@@ -50,9 +50,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h2 className='text-4xl font-semibold self-start'>Check-in de Bem-estar</h2>
-      <div className='flex flex-col w-full gap-8 px-10 py-5 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
-        <div className='flex gap-0'>
+      <h2 className='text-2xl md:text-3xl lg:text-4xl font-semibold self-start'>Check-in de Bem-estar</h2>
+      <div className='flex flex-col w-full gap-8 px-5 md:px-10 py-2.5 md:py-5 bg-surface-primary dark:bg-surface-secondary rounded transition-all duration-400'>
+        <div className='flex flex-col md:flex-row gap-10 md:gap-0'>
           <div className='flex flex-col w-full gap-10'>
             <div className='flex flex-col gap-2'>
               <p className='text-xl font-semibold'>Qual seu nível de energia hoje?</p>
@@ -67,7 +67,7 @@ export default function Home() {
                     className='peer/energia hidden'
                   />
                   <span className='peer-checked/energia:text-error-500 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9.75 9L14.25 6V18' />
                     </svg>
                   </span>
@@ -82,7 +82,7 @@ export default function Home() {
                     className='peer/energia hidden'
                   />
                   <span className='peer-checked/energia:text-error-300 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M15 18H9C9 11.8001 15 13.35 15 8.70009C15 6.37511 12 4.82513 9 7.1501' />
                     </svg>
                   </span>
@@ -97,7 +97,7 @@ export default function Home() {
                     className='peer/energia hidden'
                   />
                   <span className='peer-checked/energia:text-yellow-400 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9.75 6.59767C12.3 5.11289 15 6.59767 15 8.82485C15 9.61243 14.6839 10.3678 14.1213 10.9247C13.5587 11.4816 12.7956 11.7944 12 11.7944C12.7956 11.7944 13.5587 12.1073 14.1213 12.6642C14.6839 13.2211 15 13.9764 15 14.764C15 17.4366 12 19.2184 9 16.9912' />
                     </svg>
                   </span>
@@ -112,7 +112,7 @@ export default function Home() {
                     className='peer/energia hidden'
                   />
                   <span className='peer-checked/energia:text-success-300 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9 6V10.5C9 10.8978 9.15803 11.2794 9.43934 11.5607C9.72064 11.842 10.1022 12 10.5 12H15M15 6V18' />
                     </svg>
                   </span>
@@ -127,7 +127,7 @@ export default function Home() {
                     className='peer/energia hidden'
                   />
                   <span className='peer-checked/energia:text-success-500 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M15 6H9V10.5H10.95C13.2 10.5 15 12.15 15 14.25C15 16.35 13.2 18 10.95 18C10.2 18 9.6 17.85 9 17.55' />
                     </svg>
                   </span>
@@ -148,7 +148,7 @@ export default function Home() {
                     className='peer/estresse hidden'
                   />
                   <span className='peer-checked/estresse:text-success-500 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9.75 9L14.25 6V18' />
                     </svg>
                   </span>
@@ -163,7 +163,7 @@ export default function Home() {
                     className='peer/estresse hidden'
                   />
                   <span className='peer-checked/estresse:text-success-300 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M15 18H9C9 11.8001 15 13.35 15 8.70009C15 6.37511 12 4.82513 9 7.1501' />
                     </svg>
                   </span>
@@ -178,7 +178,7 @@ export default function Home() {
                     className='peer/estresse hidden'
                   />
                   <span className='peer-checked/estresse:text-yellow-400 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9.75 6.59767C12.3 5.11289 15 6.59767 15 8.82485C15 9.61243 14.6839 10.3678 14.1213 10.9247C13.5587 11.4816 12.7956 11.7944 12 11.7944C12.7956 11.7944 13.5587 12.1073 14.1213 12.6642C14.6839 13.2211 15 13.9764 15 14.764C15 17.4366 12 19.2184 9 16.9912' />
                     </svg>
                   </span>
@@ -193,7 +193,7 @@ export default function Home() {
                     className='peer/estresse hidden'
                   />
                   <span className='peer-checked/estresse:text-error-300 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M9 6V10.5C9 10.8978 9.15803 11.2794 9.43934 11.5607C9.72064 11.842 10.1022 12 10.5 12H15M15 6V18' />
                     </svg>
                   </span>
@@ -208,7 +208,7 @@ export default function Home() {
                     className='peer/estresse hidden'
                   />
                   <span className='peer-checked/estresse:text-error-500 cursor-pointer'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7'>
+                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 md:h-7'>
                       <path d='M15 6H9V10.5H10.95C13.2 10.5 15 12.15 15 14.25C15 16.35 13.2 18 10.95 18C10.2 18 9.6 17.85 9 17.55' />
                     </svg>
                   </span>

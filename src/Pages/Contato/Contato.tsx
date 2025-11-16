@@ -59,7 +59,7 @@ export default function Contato() {
   }
 
   return (
-    <div className='flex flex-col w-full py-12 items-center'>
+    <div className='flex flex-col w-[90%] md:w-full py-12 items-center'>
       <div className='w-full flex flex-col items-center gap-2 mb-8'>
         <h2 className='text-3xl font-bold mb-2 text-center'>Entre em contato conosco!</h2>
         <p className='text-lg text-center text-secondary'>
@@ -77,7 +77,7 @@ export default function Contato() {
         </div>
         <div className='font-semibold text-center mt-6 text-lg'>Ou nos envie uma mensagem por aqui:</div>
       </div>
-      <form onSubmit={enviarEmail} className='grid grid-cols-2 gap-5 w-3/5'>
+      <form onSubmit={enviarEmail} className='grid grid-cols-1 lg:grid-cols-2 gap-5 w-[90%] md:w-4/5 lg:w-3/5'>
         <label className='flex flex-col gap-1 text-xl font-bold'>
           Nome
           <input
@@ -135,7 +135,7 @@ export default function Contato() {
         <button
           type='submit'
           disabled={loading}
-          className={`flex w-fit px-3 py-1.5 gap-4 col-start-2 justify-self-end items-center rounded text-xl text-white font-semibold cursor-pointer ${
+          className={`flex w-fit px-3 py-1.5 gap-4 xl:col-start-2 justify-self-end items-center rounded text-xl text-white font-semibold cursor-pointer ${
             loading ? "bg-gray-400 cursor-not-allowed" : "bg-brand hover:bg-brand-hover focus:bg-brand-focus"
           }`}>
           {loading ? "Enviando..." : "Enviar"}
