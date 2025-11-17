@@ -5,7 +5,7 @@ export default function Header() {
   const { open } = useSidebar();
   return (
     <header className='flex justify-between items-center w-full px-5 py-3 bg-surface-secondary transition-all duration-400'>
-      <svg viewBox='0 0 116 24' className={`h-10 transition-all duration-400 ${open ? "opacity-0 max-w-0 overflow-hidden" : ""}`}>
+      <svg viewBox='0 0 116 24' className={`h-7 md:h-8 lg:h-9 xl:h-10 transition-all duration-400 ${open ? "opacity-0 max-w-0 overflow-hidden" : ""}`}>
         <path
           // V
           d='M39.443 5C39.7188 5.00012 39.9049 5.10756 40.001 5.32324C40.097 5.52723 40.0905 5.76141 39.9824 6.02539L34.6153 18.6074C34.5433 18.7754 34.4527 18.8958 34.3446 18.9678C34.2367 19.0276 34.1169 19.0576 33.985 19.0576C33.6848 19.0576 33.4682 18.9074 33.3361 18.6074L27.9867 6.09766C27.8546 5.76166 27.8424 5.49766 27.9505 5.30566C28.0706 5.10167 28.275 5 28.5632 5C28.8631 5.00013 29.0791 5.14962 29.2111 5.44922L33.985 16.8564L38.7403 5.48535C38.8123 5.30555 38.902 5.17938 39.01 5.10742C39.1181 5.03542 39.2628 5 39.443 5Z'

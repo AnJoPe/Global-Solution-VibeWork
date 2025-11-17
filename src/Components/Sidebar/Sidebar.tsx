@@ -121,7 +121,7 @@ export default function Sidebar() {
             className='text-brand'
           />
         </svg>
-        <ul className={`flex flex-col h-full gap-5 font-semibold text-[1.30rem] ${open ? "w-11/12 pt-8" : "pt-17"}`}>
+        <ul className={`flex flex-col h-full gap-5 font-semibold text-lg lg:text-xl xl:text-[1.30rem] ${open ? "w-11/12 pt-8" : "pt-17"}`}>
           <li>
             <NavLink
               to='/'
@@ -131,7 +131,7 @@ export default function Sidebar() {
                   isActive ? "text-primary bg-surface-primary-focus" : ""
                 }`
               }>
-              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='h-7 transition-colors duration-400'>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='h-6 lg:h-7 transition-colors duration-400'>
                 <path d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8 M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
               </svg>
               <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Dashboard</span>
@@ -146,7 +146,7 @@ export default function Sidebar() {
                   isActive ? "text-primary bg-surface-primary-focus" : ""
                 }`
               }>
-              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='h-7 transition-colors duration-400'>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='h-6 lg:h-7 transition-colors duration-400'>
                 <path d='M22 7L13.009 12.727C12.7039 12.9042 12.3573 12.9976 12.0045 12.9976C11.6517 12.9976 11.3051 12.9042 11 12.727L2 7M4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4Z' />
               </svg>
               <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Contato</span>
@@ -161,7 +161,7 @@ export default function Sidebar() {
                   isActive ? "text-primary bg-surface-primary-focus" : ""
                 }`
               }>
-              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7 transition-colors duration-400'>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 lg:h-7 transition-colors duration-400'>
                 <path d='M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' />
               </svg>
               <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Sobre</span>
@@ -176,7 +176,7 @@ export default function Sidebar() {
                   isActive ? "text-primary bg-surface-primary-focus" : ""
                 }`
               }>
-              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7 transition-colors duration-400'>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 lg:h-7 transition-colors duration-400'>
                 <path d='M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H6C4.93913 15 3.92172 15.4214 3.17157 16.1716C2.42143 16.9217 2 17.9391 2 19V21M16 3.128C16.8578 3.35037 17.6174 3.85126 18.1597 4.55206C18.702 5.25286 18.9962 6.11389 18.9962 7C18.9962 7.88611 18.702 8.74714 18.1597 9.44794C17.6174 10.1487 16.8578 10.6496 16 10.872M22 21V19C21.9993 18.1137 21.7044 17.2528 21.1614 16.5523C20.6184 15.8519 19.8581 15.3516 19 15.13M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z' />
               </svg>
               <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Integrantes</span>
@@ -192,7 +192,7 @@ export default function Sidebar() {
                   isActive ? "text-primary bg-surface-primary-focus" : ""
                 }`
               }>
-              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-7 transition-colors duration-400'>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-6 lg:h-7 transition-colors duration-400'>
                 <path d='M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z' />
               </svg>
               <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Perfil</span>
