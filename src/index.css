@@ -80,3 +80,115 @@
   --color-neutral-500: #746d75;
   --color-neutral-600: #58525e;
 }
+
+/* ESTILIZAÇÃO DO CALENDÁRIO (POSSÍVEL APENAS POR CSS) */
+.rbc-month-view,
+.rbc-btn-group,
+.rbc-btn-group button,
+.rbc-row,
+.rbc-day-bg {
+  transition: all 0.4s;
+}
+
+.rbc-toolbar-label {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.rbc-month-view,
+.rbc-btn-group {
+  border: 1px solid var(--color-neutral-300) !important;
+  border-radius: 0.3rem !important;
+}
+
+.rbc-btn-group button {
+  background-color: var(--color-surface-primary) !important;
+  color: var(--color-secondary) !important;
+  border: none !important;
+}
+
+.rbc-btn-group button:first-child {
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.rbc-btn-group button:last-child {
+  border-radius: 0 0.25rem 0.25rem 0 !important;
+}
+
+.rbc-btn-group button:hover {
+  background-color: var(--color-surface-primary-focus) !important;
+}
+
+.dark .rbc-btn-group button {
+  background-color: var(--color-surface-secondary) !important;
+}
+
+.dark .rbc-btn-group button:hover {
+  background-color: var(--color-surface-secondary-focus) !important;
+}
+
+.rbc-btn-group button.rbc-active {
+  background-color: var(--color-brand) !important;
+  color: white !important;
+}
+
+.rbc-btn-group button.rbc-active:hover {
+  background-color: var(--color-brand-hover) !important;
+}
+
+.rbc-month-header,
+.rbc-time-header {
+  background-color: var(--color-surface-secondary) !important;
+  border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+.dark .rbc-month-header,
+.rbc-time-header {
+  background-color: var(--color-surface-primary) !important;
+}
+
+.rbc-day-bg {
+  background-color: var(--color-background) !important;
+}
+
+.rbc-off-range-bg {
+  background-color: var(--color-surface-primary) !important;
+}
+
+.dark .rbc-off-range-bg {
+  background-color: var(--color-surface-secondary) !important;
+}
+
+.rbc-month-row:last-child .rbc-day-bg:first-child {
+  border-radius: 0 0 0 0.25rem !important;
+}
+
+.rbc-month-row:last-child .rbc-day-bg:last-child {
+  border-radius: 0 0 0.25rem 0 !important;
+}
+
+.rbc-date-cell.rbc-current {
+  color: white !important;
+}
+
+.rbc-date-cell {
+  color: var(--color-secondary) !important;
+}
+
+.rbc-date-cell.rbc-off-range {
+  color: var(--color-tertiary) !important;
+}
+
+.rbc-month-view .rbc-today {
+  background-color: var(--color-brand) !important;
+}
+
+.rbc-time-view .rbc-today {
+  background-color: var(--color-background) !important;
+}
+
+.rbc-event {
+  background-color: var(--color-success-500) !important;
+  font-size: 0.9rem !important;
+  color: white !important;
+}

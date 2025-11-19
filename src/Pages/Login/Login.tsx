@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+const API_URL = "https://api-vibe-work.onrender.com/";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [credentials, setCredentials] = useState({
@@ -21,10 +24,33 @@ export default function Login() {
     setTouched((prev) => ({ ...prev, [name]: true }));
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch(API_URL + `usuario/email/${credentials.email}`);
+      const usuario = await response.json();
+
+      if (response.ok && usuario.senha === credentials.senha) {
+        localStorage.setItem("userId", usuario.id);
+        localStorage.setItem("userData", JSON.stringify(usuario));
+        navigate(`/perfil/${usuario.id}`);
+      } else {
+        alert("Email ou senha incorretos");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao fazer login");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div className='flex flex-col w-[90%] md:w-[85%] py-12 items-center gap-10'>
-        <form className='grid grid-cols-1 xl:grid-cols-2 gap-8 w-[90%] md:w-4/5 lg:w-3/5'>
+        <form onSubmit={handleSubmit} className='grid grid-cols-1 xl:grid-cols-2 gap-8 w-[90%] md:w-4/5 lg:w-3/5'>
           <label className='flex flex-col gap-1 text-xl font-bold'>
             Email
             <input

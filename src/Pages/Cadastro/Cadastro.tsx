@@ -1,28 +1,81 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+type Usuario = {
+  id?: string | number;
+  nome: string;
+  email: string;
+  senha: string;
+  preferenciaTrabalho: string;
+};
+
+const API_URL = "https://api-vibe-work.onrender.com/";
 
 export default function Cadastro() {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [usuario, setUsuario] = useState<Usuario>({
+    nome: "",
+    email: "",
+    senha: "",
+    preferenciaTrabalho: "",
+  });
+
+  const validarEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setUsuario((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name } = e.target;
     setTouched((prev) => ({ ...prev, [name]: true }));
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await fetch(API_URL + "usuario", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(usuario),
+      });
+
+      if (response.ok) {
+        alert("Cadastro realizado com sucesso!");
+        navigate("/login");
+      } else {
+        alert("Erro ao cadastrar. Tente novamente.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erro na requisição");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <div className='flex flex-col w-[90%] md:w-[85%] py-12 items-center gap-10'>
-        <form className='grid grid-cols-1 xl:grid-cols-2 gap-8 w-[90%] md:w-4/5 lg:w-3/5'>
+        <form onSubmit={handleSubmit} className='grid grid-cols-1 xl:grid-cols-2 gap-8 w-[90%] md:w-4/5 lg:w-3/5'>
           <label className='flex flex-col gap-2 text-xl font-bold'>
             Nome
             <input
               type='text'
               name='nome'
               autoComplete='name'
+              value={usuario.nome}
+              onChange={handleChange}
               onBlur={handleBlur}
               required
-              className={`p-1 border-b-2 outline-0 font-light focus:border-brand ${!touched.nome ? "border-neutral-500" : "border-error-400"}`}
+              className={`p-1 border-b-2 outline-0 font-light focus:border-brand ${
+                !touched.nome ? "border-neutral-500" : usuario.nome.length >= 3 ? "border-success-400" : "border-error-400"
+              }`}
             />
           </label>
           <label className='flex flex-col gap-2 text-xl font-bold'>
@@ -32,10 +85,18 @@ export default function Cadastro() {
               name='email'
               placeholder='seu.email@dominio.com'
               autoComplete='email'
+              value={usuario.email}
+              onChange={handleChange}
               onBlur={handleBlur}
               required
               className={`p-1 border-b-2 outline-0 font-light focus:border-brand placeholder:text-secondary ${
-                !touched.email ? "border-neutral-500" : "border-error-400"
+                !touched.email
+                  ? "border-neutral-500"
+                  : validarEmail(usuario.email) && usuario.email
+                  ? "border-success-400"
+                  : usuario.email
+                  ? "border-error-400"
+                  : "border-neutral-500"
               }`}
             />
           </label>
@@ -47,19 +108,25 @@ export default function Cadastro() {
               minLength={5}
               maxLength={25}
               autoComplete='new-password'
+              value={usuario.senha}
+              onChange={handleChange}
               onBlur={handleBlur}
               required
-              className={`p-1 border-b-2 outline-0 font-light focus:border-brand ${!touched.senha ? "border-neutral-500" : "border-error-400"}`}
+              className={`p-1 border-b-2 outline-0 font-light focus:border-brand ${
+                !touched.senha ? "border-neutral-500" : usuario.senha.length >= 5 ? "border-success-400" : "border-error-400"
+              }`}
             />
           </label>
           <label className='relative flex flex-col gap-2 text-xl font-bold'>
             Preferência de Trabalho
             <select
               name='preferenciaTrabalho'
+              value={usuario.preferenciaTrabalho}
+              onChange={handleChange}
               onBlur={handleBlur}
               required
               className={`p-1 border-2 rounded outline-0 font-light appearance-none focus:border-brand ${
-                !touched.preferenciaTrabalho ? "border-neutral-500" : "border-error-400"
+                !touched.preferenciaTrabalho ? "border-neutral-500" : usuario.preferenciaTrabalho ? "border-success-400" : "border-error-400"
               }`}>
               <option value='' className='bg-surface-secondary dark:bg-surface-primary'>
                 Selecionar

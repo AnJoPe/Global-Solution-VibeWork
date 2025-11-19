@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 import Home from "./Pages/Home/Home.tsx";
+import Relatorios from "./Pages/Relatorios/Relatorios.tsx";
 import Contato from "./Pages/Contato/Contato.tsx";
 import Sobre from "./Pages/Sobre/Sobre.tsx";
 import Integrantes from "./Pages/Integrantes/Integrantes.tsx";
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
+          <Route path='relatorios' element={<Relatorios />} />
           <Route path='contato' element={<Contato />} />
           <Route path='sobre' element={<Sobre />} />
           <Route path='integrantes' element={<Integrantes />} />

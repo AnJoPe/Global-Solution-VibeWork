@@ -139,6 +139,21 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
+              to='/relatorios'
+              title='Relatórios'
+              className={({ isActive }) =>
+                `flex items-center p-3 gap-4 rounded transition-all duration-400 hover:text-secondary hover:bg-surface-primary-hover ${
+                  isActive ? "text-primary bg-surface-primary-focus" : ""
+                }`
+              }>
+              <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' className='h-6 lg:h-7 transition-colors duration-400'>
+                <path d='M8 2V6M12 2V6M16 2V6M8 10H14M8 14H16M8 18H13M6 4H18C19.1046 4 20 4.89543 20 6V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V6C4 4.89543 4.89543 4 6 4Z' />
+              </svg>
+              <span className={`transition-all duration-400 ${open ? "" : "opacity-0 max-w-0 overflow-hidden -ml-4"}`}>Relatórios</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to='/contato'
               title='Contato'
               className={({ isActive }) =>
