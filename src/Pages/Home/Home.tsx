@@ -7,6 +7,7 @@ import { getDay } from "date-fns/getDay";
 import { ptBR } from "date-fns/locale/pt-BR";
 import { addHours } from "date-fns/addHours";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import CardEvento from "../../Components/Cards/CardEvento";
 
 interface CalendarEvent {
   id: number;
@@ -280,27 +281,7 @@ export default function Home() {
               {events.length === 0 ? (
                 <p className='text-secondary text-sm'>Nenhum evento cadastrado</p>
               ) : (
-                events.map((event) => (
-                  <div key={event.id} className='p-3 bg-background rounded border-l-4 border-brand transition-all duration-400'>
-                    <div className='flex justify-between items-start gap-2 mb-2'>
-                      <div className='flex-1 flex justify-between items-center'>
-                        <p className='font-semibold text-sm'>{event.title}</p>
-                        <p className='text-xs text-tertiary'>{event.start instanceof Date ? event.start.toLocaleDateString("pt-BR") : event.start}</p>
-                      </div>
-                      <button onClick={() => handleDeleteEvento(event.id)} className='text-error-500 hover:text-error-600 focus:text-error-700'>
-                        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-5'>
-                          <path d='M18 6L6 18M6 6L18 18' />
-                        </svg>
-                      </button>
-                    </div>
-                    {event.desc && <p className='text-xs text-secondary mb-2 transition-all duration-400'>{event.desc}</p>}
-                    <button
-                      onClick={() => handleEditEvento(event.id)}
-                      className='text-xs px-2 py-1 bg-brand hover:bg-brand-hover focus:bg-brand-focus rounded text-white font-semibold'>
-                      Editar
-                    </button>
-                  </div>
-                ))
+                events.map((event) => <CardEvento key={event.id} evento={event} onDelete={handleDeleteEvento} onEdit={handleEditEvento} />)
               )}
             </div>
             <hr className='border border-brand rounded my-5' />

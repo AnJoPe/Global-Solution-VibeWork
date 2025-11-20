@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import CardBemEstar from "../../Components/Cards/CardBemEstar";
+import CardProdutividade from "../../Components/Cards/CardProdutividade";
 
 interface RelatorioBemEstar {
   id: number;
@@ -88,31 +90,7 @@ export default function Relatorios() {
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {relatoriosBemEstar.map((relatorio) => (
-              <div key={relatorio.id} className='p-5 bg-surface-primary dark:bg-surface-secondary rounded border-l-4 border-brand'>
-                <div className='flex justify-between items-start mb-3'>
-                  <p className='font-semibold text-sm'>{new Date(relatorio.data).toLocaleDateString("pt-BR", { timeZone: "UTC" })}</p>
-                  <button onClick={() => handleDeleteBemEstar(relatorio.id)} className='text-error-500 hover:text-error-600'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-5'>
-                      <path d='M18 6L6 18M6 6L18 18' />
-                    </svg>
-                  </button>
-                </div>
-                <div className='flex flex-col gap-2 text-sm mb-3'>
-                  <div className='flex justify-between'>
-                    <span>Energia:</span>
-                    <span className='font-semibold'>{relatorio.nivelEnergia}/5</span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Pausas:</span>
-                    <span className='font-semibold'>{relatorio.quantidadePausas}</span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Estresse:</span>
-                    <span className='font-semibold'>{relatorio.nivelEstresse}/5</span>
-                  </div>
-                </div>
-                <p className='text-xs text-secondary'>{relatorio.descricao}</p>
-              </div>
+              <CardBemEstar key={relatorio.id} relatorio={relatorio} onDelete={handleDeleteBemEstar} />
             ))}
           </div>
         )}
@@ -126,31 +104,7 @@ export default function Relatorios() {
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {relatoriosProdutividade.map((relatorio) => (
-              <div key={relatorio.id} className='p-5 bg-surface-primary dark:bg-surface-secondary rounded border-l-4 border-brand'>
-                <div className='flex justify-between items-start mb-3'>
-                  <p className='font-semibold text-sm'>{new Date(relatorio.data).toLocaleDateString("pt-BR", { timeZone: "UTC" })}</p>
-                  <button onClick={() => handleDeleteProdutividade(relatorio.id)} className='text-error-500 hover:text-error-600'>
-                    <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' className='h-5'>
-                      <path d='M18 6L6 18M6 6L18 18' />
-                    </svg>
-                  </button>
-                </div>
-                <div className='flex flex-col gap-2 text-sm mb-3'>
-                  <div className='flex justify-between'>
-                    <span>Horas trabalhadas:</span>
-                    <span className='font-semibold'>{relatorio.horasTrabalhadas}h</span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Dias presenciais:</span>
-                    <span className='font-semibold'>{relatorio.qntdDiasPresenciais}</span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span>Dias remotos:</span>
-                    <span className='font-semibold'>{relatorio.qntdDiasRemotos}</span>
-                  </div>
-                </div>
-                <p className='text-xs text-secondary'>{relatorio.descricao}</p>
-              </div>
+              <CardProdutividade key={relatorio.id} relatorio={relatorio} onDelete={handleDeleteProdutividade} />
             ))}
           </div>
         )}
