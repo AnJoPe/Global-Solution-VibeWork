@@ -1,11 +1,4 @@
-interface RelatorioBemEstar {
-  id: number;
-  data: string;
-  nivelEnergia: number;
-  quantidadePausas: number;
-  nivelEstresse: number;
-  descricao: string;
-}
+import type { RelatorioBemEstar } from "../../Types/Relatorios";
 
 interface CardBemEstarProps {
   relatorio: RelatorioBemEstar;

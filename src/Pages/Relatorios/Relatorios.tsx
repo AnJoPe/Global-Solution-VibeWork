@@ -1,24 +1,7 @@
 import { useEffect, useState } from "react";
 import CardBemEstar from "../../Components/Cards/CardBemEstar";
 import CardProdutividade from "../../Components/Cards/CardProdutividade";
-
-interface RelatorioBemEstar {
-  id: number;
-  data: string;
-  nivelEnergia: number;
-  quantidadePausas: number;
-  nivelEstresse: number;
-  descricao: string;
-}
-
-interface RelatorioProdutividade {
-  id: number;
-  data: string;
-  horasTrabalhadas: number;
-  qntdDiasPresenciais: number;
-  qntdDiasRemotos: number;
-  descricao: string;
-}
+import type { RelatorioBemEstar, RelatorioProdutividade } from "../../Types/Relatorios";
 
 const API_URL = "https://api-vibe-work.onrender.com/";
 

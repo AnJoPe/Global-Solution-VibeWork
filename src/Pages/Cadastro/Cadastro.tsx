@@ -1,13 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-type Usuario = {
-  id?: string | number;
-  nome: string;
-  email: string;
-  senha: string;
-  preferenciaTrabalho: string;
-};
+import type { Usuario } from "../../Types/UsuarioType";
 
 const API_URL = "https://api-vibe-work.onrender.com/";
 

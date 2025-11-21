@@ -1,10 +1,4 @@
-interface CalendarEvent {
-  id: number;
-  title: string;
-  start: Date;
-  end: Date;
-  desc?: string;
-}
+import type { CalendarEvent } from "../../Types/CalendarEvent";
 
 interface CardEventoProps {
   evento: CalendarEvent;

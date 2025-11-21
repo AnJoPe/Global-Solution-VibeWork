@@ -1,11 +1,4 @@
-interface RelatorioProdutividade {
-  id: number;
-  data: string;
-  horasTrabalhadas: number;
-  qntdDiasPresenciais: number;
-  qntdDiasRemotos: number;
-  descricao: string;
-}
+import type { RelatorioProdutividade } from "../../Types/Relatorios";
 
 interface CardProdutividadeProps {
   relatorio: RelatorioProdutividade;

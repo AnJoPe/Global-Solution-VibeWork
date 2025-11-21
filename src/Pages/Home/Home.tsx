@@ -7,15 +7,8 @@ import { getDay } from "date-fns/getDay";
 import { ptBR } from "date-fns/locale/pt-BR";
 import { addHours } from "date-fns/addHours";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import type { CalendarEvent } from "../../Types/CalendarEvent";
 import CardEvento from "../../Components/Cards/CardEvento";
-
-interface CalendarEvent {
-  id: number;
-  title: string;
-  start: Date;
-  end: Date;
-  desc?: string;
-}
 
 const API_URL = "https://api-vibe-work.onrender.com/";
 
